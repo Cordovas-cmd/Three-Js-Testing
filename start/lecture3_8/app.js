@@ -72,6 +72,10 @@ class App{
         gltf => {
             // add scene
             this.scene.add(gltf.scene);
+            // calculates asset aligne dbounding box around an asset and it's children console logs the scale.
+            const bbox = new THREE.Box3().setFromObject(gltf.scene);
+            
+            console.log(`min:${bbox.min.x.toFixed(2)},${bbox.min.y.toFixed(2)},${bbox.min.z.toFixed(2)} max:${bbox.max.x.toFixed(2)},${bbox.max.y.toFixed(2)},${bbox.max.z.toFixed(2)}`);
             // hide load bar
             this.loadingBar.visible = false;
             //start rendering loop 
