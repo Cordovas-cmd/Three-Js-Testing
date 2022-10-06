@@ -27,8 +27,11 @@ class App{
         //Replace Box with Circle, Cone, Cylinder, Dodecahedron, Icosahedron, Octahedron, Plane, Sphere, Tetrahedron, Torus or TorusKnot
 
         // Circle geometry can take in four parameters, (radius: float, segments: integer, thetaStart: float, thetaEnd: float)
+
         // const geometry = new THREE.CircleGeometry(1, 32);
+
         // const geometry = this.createStarGeometry();
+        
         const geometry = this.createPolygonGeometry();
 
         const material = new THREE.MeshStandardMaterial( { color: 0xFF0000 });
